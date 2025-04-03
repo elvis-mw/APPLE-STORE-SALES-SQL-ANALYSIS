@@ -51,6 +51,7 @@ Data used in this project is secondary data sourced from kaggle.com. The data is
 5.**Warranty Data:** Contains claim_id, claim_date, sale_id, and repair_status, recording warranty claims.
 
 ### Entity-Relationship Diagram (ERD)
+![ERD](https://github.com/user-attachments/assets/d7ce849a-3f99-4e0c-98b6-264f6854a084)
 
 ### Tools.
 - **Excel** - Data cleaning.
