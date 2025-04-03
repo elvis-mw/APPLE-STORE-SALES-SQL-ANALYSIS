@@ -59,7 +59,7 @@ SELECT * FROM INFORMATION_SCHEMA.TABLES
 GO
 
 BULK INSERT sales
-FROM 'C:\Users\Administrator\Desktop\Practice\APPLE\sales.csv'
+FROM 'F:\from desktop\new\Practice\APPLE\sales.csv'
 WITH (FORMAT='CSV')
 
 SELECT * FROM sales
@@ -67,28 +67,28 @@ GO
 
 
 BULK INSERT category
-FROM 'C:\Users\Administrator\Desktop\Practice\APPLE\category.csv'
+FROM 'F:\from desktop\new\Practice\APPLE\category.csv'
 WITH (FORMAT='CSV')
 
 SELECT * FROM category
 GO
 
 BULK INSERT products
-FROM 'C:\Users\Administrator\Desktop\Practice\APPLE\products.csv'
+FROM 'F:\from desktop\new\Practice\APPLE\products.csv'
 WITH (FORMAT='CSV')
 
 SELECT * FROM products
 GO
 
 BULK INSERT warranty
-FROM 'C:\Users\Administrator\Desktop\Practice\APPLE\warranty.csv'
+FROM 'F:\from desktop\new\Practice\APPLE\warranty.csv'
 WITH (FORMAT='CSV')
 
 SELECT * FROM warranty
 GO
 
 BULK INSERT stores
-FROM 'C:\Users\Administrator\Desktop\Practice\APPLE\stores.csv'
+FROM 'F:\from desktop\new\Practice\APPLE\stores.csv'
 WITH (FORMAT='CSV')
 
 SELECT * FROM stores
@@ -108,9 +108,10 @@ GO
 
 -- 2. Calculate the total number of units sold by each store.
 
-SELECT store_id, SUM(Quantity) AS Total_Units_Sold -- Calculates the total number of products sold.
+SELECT store_id,SUM(Quantity) AS Total_Units_Sold -- Calculates the total number of products sold.
 FROM Sales										
-GROUP BY store_id;								 -- Groups the sales records by store ID.
+GROUP BY store_id   -- Groups the sales records by store ID.
+ORDER BY Total_Units_Sold DESC; -- orders sales record by total units sold from the heighest to the least.
 GO
 
 -- 3. Identify which store had the highest total units sold in the last year.
@@ -134,41 +135,14 @@ FROM Sales
 GROUP BY  store_id, YEAR(sale_date);
 GO
 
--- 5. Identify the least selling product in each country for each year.
-
-WITH ProductSales AS (                                   
-    SELECT 
-        s.store_id, 
-        s.Country, 
-        YEAR(sa.sale_date) AS SaleYear, 
-        sa.product_id, 
-        SUM(sa.Quantity) AS Total_Sales
-    FROM Sales sa
-    JOIN Stores s ON sa.store_id = s.store_id
-    GROUP BY s.store_id, s.Country, YEAR(sa.sale_date), sa.product_id
-)
-SELECT Country, SaleYear, product_id, Total_Sales
-FROM (
-    SELECT 
-        Country, 
-        SaleYear, 
-        product_id, 
-        Total_Sales,
-        RANK() OVER (PARTITION BY Country, SaleYear ORDER BY Total_Sales ASC) AS rnk
-    FROM ProductSales
-) RankedSales
-WHERE rnk = 1;  -- Selects the product with the lowest sales per country and year.
-GO
-
-
--- 6. Find the average price of products in each category.
+-- 5. Find the average price of products in each category.
 
 SELECT category_id, AVG(Price) AS Avg_Price -- Calculates the average price of products
 FROM Products
 GROUP BY category_id;                      -- Groups by product category.
 GO
 
--- 7. Identify the product category with the most warranty claims filed in the last two years.
+-- 6. Identify the product category with the most warranty claims filed in the last two years.
 
 SELECT TOP 1 
     p.category_id, 
@@ -181,7 +155,7 @@ GROUP BY p.category_id
 ORDER BY Claim_Count DESC;
 GO
 
--- 8. Identify the least selling product in each country for each year.
+-- 7. Identify the least selling product in each country for each year.
 
 WITH ProductSales AS (                                   
     SELECT s. store_id, s.Country, YEAR(sa.sale_date) AS SaleYear, sa.product_id, SUM(sa.Quantity) AS TotalSales
@@ -198,7 +172,7 @@ GO
 --- 2. SALES TRENDS (Sales Trends, Seasonal Patterns & Best-Selling Insights)
 
 
--- 9. Count the number of unique products sold in the last year Per Store & Category.
+-- 8. Count the number of unique products sold in the last year Per Store & Category.
 
 SELECT s.store_id, p.category_id, c.category_name, COUNT(DISTINCT s.product_id) AS Unique_Products_Sold  
 FROM Sales s  
@@ -208,7 +182,7 @@ WHERE s.sale_date >= DATEADD(YEAR, -1, GETDATE())
 GROUP BY s.store_id, p.category_id, c.category_name;
 GO
 
--- 10. Identify the best-selling day for each store.
+-- 9. Identify the best-selling day for each store.
 
 WITH DailySales AS (
     SELECT store_id, sale_date, SUM(quantity) AS Total_Sales  -- Summing sales for each store per day
@@ -225,14 +199,14 @@ FROM RankedSales
 WHERE rnk = 1;  -- Picks the highest sales day for each store
 GO
 
--- 11. Identify how many sales occurred in December 2022.
+-- 10. Identify how many sales occurred in December 2022.
 
 SELECT COUNT(*) AS Sales_Count                           -- Counts the number of sales.
 FROM Sales
 WHERE YEAR(sale_date) = 2022 AND MONTH(sale_date) = 12; -- Filters only sales made in December 2022.
 GO
 
--- 12. List the months in the last three years where sales exceeded 1,000 units in the USA.
+-- 11. List the months in the last three years where sales exceeded 1,000 units in the USA.
 
 SELECT YEAR(sale_date) AS Year, MONTH(sale_date) AS Month
 FROM Sales sa
@@ -242,7 +216,7 @@ GROUP BY YEAR(sale_date), MONTH(sale_date)
 HAVING SUM(Quantity) > 1000;                                        -- Groups sales by month and filters those with total sales exceeding 1,000.
 GO
 
--- 13. Calculate the monthly running total of sales for each store over the past four years and compare trends.
+-- 12. Calculate the monthly running total of sales for each store over the past four years and compare trends.
 
 SELECT  store_id, YEAR(sale_date) AS Year, MONTH(sale_date) AS Month, 
        SUM(Quantity) AS MonthlySales,
@@ -258,20 +232,20 @@ GO
 --- 3. WARRANTY & QUALITY ISSUES (Warranty Claims, Product Quality & Customer Service)
 
 
--- 14. Calculate the percentage of warranty claims marked as "Warranty Void".
+-- 13. Calculate the percentage of warranty claims marked as "Warranty Void".
 
 SELECT (COUNT(CASE WHEN repair_status = 'Warranty Void' THEN 1 END) * 100.0 / COUNT(*)) AS Percentage_Void -- Counts claims marked as Warranty Void.
 FROM warranty;
 GO
 
--- 15. How many warranty claims were filed in 2023?
+-- 14. How many warranty claims were filed in 2023?
 
 SELECT COUNT(*) AS Claims_Filed -- Counts all claims.
 FROM warranty
 WHERE YEAR(claim_date) = 2023; -- Filters only claims made in 2023.
 GO
 
---16. Determine how many warranty claims were filed for products launched in the last two years.
+--15. Determine how many warranty claims were filed for products launched in the last two years.
 
 SELECT COUNT(*) AS Claims_For_Recent_Products
 FROM warranty wc
@@ -281,15 +255,15 @@ WHERE p.launch_date >= DATEADD(YEAR, -2, GETDATE()); -- Filtering for products l
 GO
 
 
--- 17. Calculate how many warranty claims were filed within 100 days of a product sale.
+-- 16. Calculate how many warranty claims were filed within 100 days of a product sale.
 
-SELECT COUNT(*) AS Claims_Filed_Within_180Days
+SELECT COUNT(*) AS Claims_Filed_Within_100Days
 FROM warranty wc
 JOIN Sales sa ON wc.sale_id = sa.sale_id
 WHERE DATEDIFF(DAY, sa.sale_date, wc.claim_date) <= 100; --Filters claims filed within 100 days (DATEDIFF(DAY, sa.SaleDate, wc.ClaimDate) <= 100)
 GO
 
--- 18. Calculate the correlation between product price and warranty claims for products sold in the last five years.
+-- 17. Calculate the correlation between product price and warranty claims for products sold in the last five years.
 
 SELECT 
     CASE 
@@ -311,7 +285,7 @@ GROUP BY CASE
     END;
 GO
 
--- 19. Identify the store with the highest percentage of "Paid Repaired" claims relative to total claims filed.
+-- 18. Identify the store with the highest percentage of "Paid Repaired" claims relative to total claims filed.
 
 SELECT TOP 1 s. store_id, 
        (COUNT(CASE WHEN wc.repair_status = 'Paid Repaired' THEN 1 END) * 100.0 / COUNT(wc.claim_id)) AS Paid_Repaired_Percentage -- Filters claims with status "Paid Repaired"
@@ -323,7 +297,7 @@ GROUP BY s. store_id
 ORDER BY Paid_Repaired_Percentage DESC; 
 GO
 
--- 20. Determine how many stores have never had a warranty claim filed.
+-- 19. Determine how many stores have never had a warranty claim filed.
 
 SELECT COUNT(DISTINCT s. store_id) AS Stores_Without_Claims -- Counts unique stores that never had a claim.
 FROM Stores s
@@ -332,7 +306,7 @@ LEFT JOIN warranty wc ON sa.sale_id = wc.sale_id
 WHERE wc.claim_id IS NULL;                               -- Identifies stores with no claims.
 GO
 
--- 21. Determine the percentage chance of receiving warranty claims after each purchase for each country.
+-- 20. Determine the percentage chance of receiving warranty claims after each purchase for each country.
 
 SELECT s.Country,                                                        -- Counts sales and warranty claims per country.
        (COUNT(wc.claim_id) * 100.0 / COUNT(sa.sale_id)) AS Claim_Percentage -- Calculates the percentage of purchases that result in a claim.
