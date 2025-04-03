@@ -28,6 +28,15 @@
 [key takeaways and implication](#key-takeaways-and-implication)
 
 ## Project Overview
+This project showcases advanced SQL querying techniques through the analysis of over 1 million rows of Apple Store sales data. The dataset includes details on products, stores, sales transactions, and warranty claims from Apple retail locations worldwide.
+
+By leveraging SQL, this project uncovers key business insights, including:
+
+1.  Sales performance trends across different stores and regions
+   
+2. Store performance analysis to evaluate profitability and efficiency
+   
+3. Warranty claims patterns and their impact on revenue
 
 ## Project's Focus
 
@@ -63,14 +72,21 @@ Data used in this project is secondary data sourced from kaggle.com. The data is
 - **Power BI**- Data reporing and visualization.
    - [Download here](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
 
-### Data pre-processesing.
-- data loading and inspection using excel power query
-- handling missing values  
-
 # DATA ANALYSIS.
 
 ### Objective:
-- This project seeks to answer the following business questions:
+
+This analysis seeks to answer real-world business questions, such as:
+
+- Which Apple stores generate the highest revenue?
+
+- How do stores compare in terms of sales growth and profitability?
+
+- What are the top-performing products in terms of sales?
+
+- How do warranty claims vary across different regions and product types?
+
+- Are there seasonal trends in sales and warranty claims?
 
 # 1. STORES & PRODUCTS PERFORMANCE (Store Performance, Product Sales & Categories)
 
