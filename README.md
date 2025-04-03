@@ -288,7 +288,8 @@ Insight
 # 3. WARRANTY & QUALITY ISSUES (Warranty Claims, Product Quality & Customer Service)
 ---
 
-##13. Calculate the percentage of warranty claims marked as "Warranty Void".
+## 13. Calculate the percentage of warranty claims marked as "Warranty Void".
+
 Objective:
 •	Determine the proportion of rejected warranty claims to understand the warranty policy effectiveness.
 
