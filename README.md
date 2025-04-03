@@ -1,3 +1,5 @@
+![APPLE](https://github.com/user-attachments/assets/9ed37427-74c9-43ef-a0c5-35609a70da58)
+
 # APPLE-STORE-SALES-SQL-ANALYSIS
 ## TABLE OF CONTENT 
 
