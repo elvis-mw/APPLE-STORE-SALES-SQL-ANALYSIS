@@ -57,9 +57,9 @@ Data used in this project is secondary data sourced from kaggle.com. The data is
 - **Excel** - Data cleaning.
    - [Download here](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
 - **SQL(SSMS)**- Data analysis.
-   - [Download here]()
+   - [Download here](https://learn.microsoft.com/en-us/ssms/download-sql-server-management-studio-ssms)
 - **Power BI**- Data reporing and visualization.
-   - [Download here]()
+   - [Download here](https://www.microsoft.com/en-us/download/details.aspx?id=58494)
 
 ### Data pre-processesing.
 - data loading and inspection using excel power query
