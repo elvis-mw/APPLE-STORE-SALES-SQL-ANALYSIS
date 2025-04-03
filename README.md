@@ -54,9 +54,12 @@ Data used in this project is secondary data sourced from kaggle.com. The data is
 ### Entity-Relationship Diagram (ERD)
 
 ### Tools.
-- **Excel** - Data cleaning.[Download here]()
-- **SQL(SSMS)**- Data analysis.[Download here]()
-- **Power BI**- Data reporing and visualization.[Download here]()
+- **Excel** - Data cleaning.
+   - [Download here](www.microsoft.com)
+- **SQL(SSMS)**- Data analysis.
+   - [Download here]()
+- **Power BI**- Data reporing and visualization.
+   - [Download here]()
 
 ### Data pre-processesing.
 - data loading and inspection using excel power query
