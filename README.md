@@ -26,7 +26,6 @@
 [key takeaways and implication](#key-takeaways-and-implication)
 
 ## Project Overview
----
 
 ## Project's Focus
 
@@ -66,12 +65,11 @@ Data used in this project is secondary data sourced from kaggle.com. The data is
 - handling missing values  
 
 # DATA ANALYSIS.
----
+
 ### Objective:
 - This project seeks to answer the following business questions:
 
 # 1. STORES & PRODUCTS PERFORMANCE (Store Performance, Product Sales & Categories)
----
 
 ## 1. Find the number of stores in each country.
 Objective:
