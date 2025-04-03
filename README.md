@@ -55,7 +55,7 @@ Data used in this project is secondary data sourced from kaggle.com. The data is
 
 ### Tools.
 - **Excel** - Data cleaning.
-   - [Download here]([www.microsoft.com](https://www.microsoft.com/en-us/download/details.aspx?id=49117))
+   - [Download here](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
 - **SQL(SSMS)**- Data analysis.
    - [Download here]()
 - **Power BI**- Data reporing and visualization.
