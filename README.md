@@ -13,17 +13,15 @@
 
 [Tools](#tools)
 
-[Data preprocessesing](#data-preprocessesing)
-
 [DATA ANALYSIS](#data-analysis)
 
 [Objective](#objective)
 
-[STORES & PRODUCTS PERFORMANCE](#store-&-product-performance)
+[STORES AND PRODUCTS PERFORMANCE(Store Performance, Product Sales and Categories)](#store-and-product-performance(store-performance,-product-sales-and-categories))
 
-[SALES TRENDS](#sale-trend)
+[SALES TRENDS(Sales Trends, Seasonal Patterns and Bestselling Insights)](#sale-trend(sales-trends,-seasonal-patterns-and-bestselling-insights))
 
-[WARRANTY & QUALITY ISSUES (Warranty Claims, Product Quality & Customer Service)](#waranty-&-quality-issues-(-warranty-claims,-Product-quality-&-customer-service-))
+[WARRANTY AND QUALITY ISSUES(Warranty Claims, Product Quality And Customer Service)](#waranty-and-quality-issues(warranty-claims,-Product-quality-and-customer-service))
 
 [key takeaways and implication](#key-takeaways-and-implication)
 
@@ -88,7 +86,7 @@ This analysis seeks to answer real-world business questions, such as:
 
 - Are there seasonal trends in sales and warranty claims?
 
-# 1. STORES & PRODUCTS PERFORMANCE (Store Performance, Product Sales & Categories)
+# 1. STORES AND PRODUCTS PERFORMANCE (Store Performance, Product Sales and Categories)
 
 ## 1. Find the number of stores in each country.
 Objective:
@@ -208,7 +206,7 @@ Insight
 
 - The results provide an additional opportunity to cross-check underperforming products and investigate regional consumer preferences.
 
-# 2. SALES TRENDS (Sales Trends, Seasonal Patterns & Best-Selling Insights)
+# 2. SALES TRENDS(Sales Trends, Seasonal Patterns and Bestselling Insights)
 ---
 
 ## 8. Count the number of unique products sold in the last year Per Store & Category.
@@ -302,7 +300,7 @@ Insight
 
 - A running total helps in visualizing long-term sales trends. Stores with fluctuating sales may require investigation into seasonal effects, economic conditions, or store-level operational challenges.
 
-# 3. WARRANTY & QUALITY ISSUES (Warranty Claims, Product Quality & Customer Service)
+# 3. WARRANTY AND QUALITY ISSUES(Warranty Claims, Product Quality and Customer Service)
 ---
 
 ## 13. Calculate the percentage of warranty claims marked as "Warranty Void".
