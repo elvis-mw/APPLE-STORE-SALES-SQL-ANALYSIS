@@ -5,15 +5,15 @@
 
 [Project Overview](#project-overview)
 
-[Project's Focus](#project's-focus)
+[Project Focus](#project-focus)
 
-[Data Sources](#data-Sources)
+[Data Sources](#data-sources)
 
 [Datasets structure](#datasets-structure)
 
 [Tools](#tools)
 
-[Data pre-processesing](#data-pre-processesing)
+[Data preprocessesing](#data-preprocessesing)
 
 [DATA ANALYSIS](#data-analysis)
 
@@ -38,7 +38,7 @@ By leveraging SQL, this project uncovers key business insights, including:
    
 3. Warranty claims patterns and their impact on revenue
 
-## Project's Focus
+## Project Focus
 
 This project emphasizes:
 - **Complex Joins and Aggregations**: Advanced SQL joins and aggregations.
