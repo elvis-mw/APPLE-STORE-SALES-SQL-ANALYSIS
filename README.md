@@ -115,7 +115,7 @@ GO
 ```
 Insight
 
-- This metric highlights the sales volume of each store, allowing comparisons between high-performing and underperforming stores. It helps in resource allocation, such as inventory management and marketing efforts.
+- This metric highlights the sales volume of each store, allowing comparisons between high-performing and underperforming stores. It would helps in resource allocation, inventory management and marketing efforts.
 
 ## 3. Identify which store had the highest total units sold in the last year.
 Objective:
@@ -131,7 +131,7 @@ GO
 ```
 Insight
 
-- Understanding which store sold the most units over the past year can highlight best practices, store location advantages, or successful promotional strategies. Other stores can learn from this top-performing location.
+- Understanding which store sold the most units over the past year can highlight best practices, store location advantages, or successful promotional strategies. Other stores can learn from this top-performing store.
 
 ## 4. Analyze the year-by-year growth ratio for each store.
 Objective:
@@ -184,7 +184,7 @@ GO
 ```
 Insight
 
-- A high number of warranty claims in a category could indicate product quality issues. Businesses can use this data to improve manufacturing processes or adjust warranty policies.
+- A high number of warranty claims in a category could indicate product quality issues. The company can use this data to improve manufacturing processes or adjust warranty policies.
 
 ## 7. Identify the least selling product in each country for each year.
 Objective:
@@ -248,7 +248,7 @@ GO
 ```
 Insight
 
-- Recognizing peak sales days can help businesses optimize staffing, inventory, and promotions. Stores can capitalize on high-traffic days by running targeted marketing campaigns.
+- Recognizing peak sales days can help stores optimize staffing, inventory, and promotions. Stores can capitalize on high-traffic days by running targeted marketing campaigns.
 
 ## 10. Identify how many sales occurred in December 2022.
 Objective:
@@ -314,7 +314,7 @@ GO
 ```
 Insight
 
-- A high percentage of voided claims may indicate customer misunderstanding of warranty policies or an issue with policy transparency. Businesses may need to improve communication regarding warranty coverage.
+- A high percentage of voided claims may indicate customer misunderstanding of warranty policies or an issue with policy transparency. stores may need to improve communication regarding warranty coverage.
 
 ## 14. How many warranty claims were filed in 2023?
 Objective:
@@ -344,7 +344,7 @@ GO
 ```
 Insight
 
-- High claims for recently launched products might point to manufacturing defects or design flaws. Businesses should use this data to adjust production and improve new product testing.
+- High claims for recently launched products might point to manufacturing defects or design flaws. Store could use this data to adjust production and improve new product testing.
 
 ## 16. Calculate how many warranty claims were filed within 100 days of a product sale.
 Objective:
@@ -458,5 +458,6 @@ Insight
 3. Customer Experience & Warranty Issues.
 	- High warranty claim percentages could indicate manufacturing issues or unclear warranty policies.
 	- Stores with a high "Paid Repair" percentage may need warranty policy improvements.
-	- Regional variations in claim rates help businesses tailor their after-sales service strategies.
+	- Regional variations in claim rates help stores tailor their after-sales service strategies.
 
+**AUTHOR: ELVIS MWANGI**
