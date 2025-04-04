@@ -86,7 +86,7 @@ This analysis seeks to answer real-world business questions, such as:
 
 - Are there seasonal trends in sales and warranty claims?
 
-# 1. STORES AND PRODUCTS PERFORMANCE (Store Performance, Product Sales and Categories)
+# STORES AND PRODUCTS PERFORMANCE(Store Performance, Product Sales and Categories)
 
 ## 1. Find the number of stores in each country.
 Objective:
@@ -206,7 +206,7 @@ Insight
 
 - The results provide an additional opportunity to cross-check underperforming products and investigate regional consumer preferences.
 
-# 2. SALES TRENDS(Sales Trends, Seasonal Patterns and Bestselling Insights)
+# SALES TRENDS(Sales Trends, Seasonal Patterns and Bestselling Insights)
 ---
 
 ## 8. Count the number of unique products sold in the last year Per Store & Category.
@@ -300,8 +300,7 @@ Insight
 
 - A running total helps in visualizing long-term sales trends. Stores with fluctuating sales may require investigation into seasonal effects, economic conditions, or store-level operational challenges.
 
-# 3. WARRANTY AND QUALITY ISSUES(Warranty Claims, Product Quality and Customer Service)
----
+# WARRANTY AND QUALITY ISSUES(Warranty Claims, Product Quality and Customer Service)
 
 ## 13. Calculate the percentage of warranty claims marked as "Warranty Void".
 
