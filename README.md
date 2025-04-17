@@ -63,6 +63,8 @@ Data used in this project is secondary data sourced from kaggle.com. The data is
 ![ERD](https://github.com/user-attachments/assets/d7ce849a-3f99-4e0c-98b6-264f6854a084)
 
 ### Tools.
+![pp](https://github.com/user-attachments/assets/91e29a1d-f22b-40c1-975f-bfa2c1247b8f)
+
 - **Excel** - Data cleaning.
    - [Download here](https://www.microsoft.com/en-us/download/details.aspx?id=49117)
 - **SQL(SSMS)**- Data analysis.
